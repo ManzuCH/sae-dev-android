@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/messageID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sélectionnez une classe :"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnRT1FI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnRT1FI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="reagir"
+        android:text="RT1FI"
+        app:layout_constraintBottom_toTopOf="@+id/btnRT1FA"
+        app:layout_constraintEnd_toStartOf="@+id/btnRT2FI"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageID" />
+
+    <Button
+        android:id="@+id/btnRT2FI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="reagir"
+        android:text="RT2FI"
+        app:layout_constraintBottom_toTopOf="@+id/btnRT2FA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnRT1FI"
+        app:layout_constraintTop_toBottomOf="@+id/messageID" />
+
+    <Button
+        android:id="@+id/btnRT1FA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="reagir"
+        android:text="RT1FA"
+        app:layout_constraintBottom_toTopOf="@+id/progressBarID"
+        app:layout_constraintEnd_toStartOf="@+id/btnRT2FA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRT1FI" />
+
+    <Button
+        android:id="@+id/btnRT2FA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="reagir"
+        android:text="RT2FA"
+        app:layout_constraintBottom_toTopOf="@+id/progressBarID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnRT1FA"
+        app:layout_constraintTop_toBottomOf="@+id/btnRT2FI" />
+
+    <ProgressBar
+        android:id="@+id/progressBarID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/btnEnvoyerPresences"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRT1FA" />
+
+    <Button
+        android:id="@+id/btnEnvoyerPresences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="envoyerPresences"
+        android:text="Envoyer présences"
+        app:layout_constraintBottom_toTopOf="@+id/listViewID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarID" />
+
+    <ListView
+        android:id="@+id/listViewID"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEnvoyerPresences" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
